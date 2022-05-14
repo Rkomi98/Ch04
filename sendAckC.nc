@@ -36,7 +36,6 @@ module sendAckC {
   //bool FLAG;
   uint8_t last_digit = 6; // 6+1?
   uint8_t counter=0;
-  uint8_t i=0;
   //uint8_t counter2=0; // Do we need it?
   uint8_t rec_id = 62; //10562546
   message_t packet;
