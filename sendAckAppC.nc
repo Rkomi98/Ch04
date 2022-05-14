@@ -20,6 +20,7 @@ implementation {
   components new AMReceiverC(AM_MY_MSG);
   components new TimerMilliC() as Timer;
   components ActiveMessageC;
+  components new FakeSensorC();
 
 /****** INTERFACES *****/
   //Boot interface
@@ -36,9 +37,10 @@ implementation {
 
   //Interfaces to access package fields
   App.Packet -> AMSenderC;
+  App.PacketAcknowledgements -> AMSenderC;
   
   //Timer interface
-  App.Timer0 -> Timer;
+  App.Timer -> Timer;
   
   // Fake Sensor read
   App.Read -> FakeSensorC;
