@@ -1,5 +1,6 @@
 /**
- *  Source file for implementation of module sendAckC in which
+ *  Source file for implementation of module send
+ AckC in which
  *  the node 1 send a request to node 2 until it receives a response.
  *  The reply message contains a reading from the Fake Sensor.
  *
@@ -33,7 +34,7 @@ module sendAckC {
 
 } implementation {
   //bool FLAG;
-  uint8_t last_digit = 6; // 6+1
+  uint8_t last_digit = 6; // 6+1?
   uint8_t counter=0;
   uint8_t i=0;
   //uint8_t counter2=0; // Do we need it?
@@ -59,14 +60,13 @@ module sendAckC {
  	 mess->counter = counter;
 	 dbg("radio_pack","Preparing the message... \n");
 	 /* 2. Set the ACK flag for the message using the PacketAcknowledgements interface
-	 *     (read the docs)*/
-	 
+	 *     (read the docs)*/ 
 	 
 	 if(call PacketAcknowledgements.requestAck(&packet) == SUCCESS) {
 	 /** 3. Send an UNICAST message to the correct node //**HOW?**
 	 * X. Use debug statements showing what's happening (i.e. message fields)*/
   		if(call AMSend.send(RESP, &packet, sizeof(my_msg_t)) == SUCCESS){
-  			dbg("radio", "REQ sent with counter %d and data: %hhu \n", counter, mess->data);
+  			dbg("radio", "REQ sent with counter %d and data: %d \n", counter, mess->data);
   			counter++;
   			}
   		}
@@ -79,7 +79,7 @@ module sendAckC {
   	 * `call Read.read()` reads from the fake sensor.
   	 * When the reading is done it raises the event read done.
   	 */
-	call Read.read();
+  	call Read.read();
   }
 
   //***************** Boot interface ********************//
@@ -124,8 +124,7 @@ module sendAckC {
 	 if (&packet == buf) {//&& error == SUCCESS
       dbg("radio_send", "Packet sent...");
       dbg_clear("radio_send", " at time %s \n", sim_time_string());
-      if (call PacketAcknowledgements.wasAcked(&packet)){
-      
+      if (call PacketAcknowledgements.wasAcked(&packet)&&counter>rec_id+last_digit+1){
       	call Timer.stop();
       }
       else{
@@ -167,10 +166,7 @@ module sendAckC {
   		
   		if(mess->type == REQ) {
   			counter = mess->counter;
-  			for (i=0;i<=last_digit;i++){
-  				sendResp();
-  				dbg("radio", "REQ sent with counter %d and data: %hhu \n", counter, mess->data);
-  			}
+  			sendResp();
   		}
   		
   		return buf;  	
@@ -196,8 +192,8 @@ module sendAckC {
 	 */
 	 if(call PacketAcknowledgements.requestAck(&packet) == SUCCESS) {
   		if(call AMSend.send(REQ, &packet, sizeof(my_msg_t)) == SUCCESS){
-  			dbg("radio_send", "RESP sent\n");
+  			dbg("radio_send", "RESP sent %d, %d \n",data2, counter); //	dbg("radio", "REQ sent with counter %d \n", counter);
+  			}
   		}
   	}
   }
-}
