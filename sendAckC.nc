@@ -33,7 +33,7 @@ module sendAckC {
 } implementation {
   bool FLAG;
   uint8_t last_digit = 7; // 6+1
-  uint8_t counter=0;
+  uint8_t counter=1;
   uint8_t rec_id = 62; //10562546
   message_t packet;
 
@@ -57,45 +57,71 @@ module sendAckC {
 	 dbg("radio_pack","Preparing the message... \n");
 	 /* 2. Set the ACK flag for the message using the PacketAcknowledgements interface
 	 *     (read the docs)*/
-	 FLAG = requestAck( sensor_msg_t* mess );
-	 /* Has to be changed!
-	 if (call AMSend.send(AM_BROADCAST_ADDR, &packet, sizeof(radio_toss_msg_t)) == SUCCESS) {
-		dbg("radio_send", "Sending packet");	
-		locked = TRUE;
-		dbg_clear("radio_send", " at time %s \n", sim_time_string());
-      }
-	 /** 3. Send an UNICAST message to the correct node
-	 * X. Use debug statements showing what's happening (i.e. message fields)
-	 */
+	 if (counter<rec_id){
+	 	FLAG = FALSE;/*wasAcked(sensor_msg_t* mess);
+	 	if (FLAG == FALSE){
+	 		counter++;
+	 	}
+	 	else{
+	 		return;
+	 	}*/
+	 	counter++;
+	 }
+	 else{
+	 	FLAG = TRUE;//wasAcked(sensor_msg_t* mess);
+	 }
+	 /* Has to be changed! In particular the 0 I think or we need only the last if
+	 
+	 /** 3. Send an UNICAST message to the correct node //**HOW?**
+	 * X. Use debug statements showing what's happening (i.e. message fields)*/
+	 if(call AMSend.send(counter, &packet,sizeof(sensor_msg_t)) == SUCCESS){ //It was 0
+	     dbg("radio_send", "Packet passed to lower layer successfully!\n");
+	     dbg("radio_pack",">>>Pack\n \t Payload length %hhu \n", call Packet.payloadLength( &packet ) );
+	     dbg_clear("radio_pack","\t Payload Sent\n" );
+		 dbg_clear("radio_pack", "\t\t type: %hhu \n ", mess->type);
+		 dbg_clear("radio_pack", "\t\t data: %hhu \n", mess->data);
+ 		 dbg_clear("radio_pack", "\t\t data: %hhu \n", mess->counter);
+		 
+  	}
  }        
 
   //****************** Task send response *****************//
-  void sendResp() {
-  	/* This function is called when we receive the REQ message.
-  	 * Nothing to do here. 
+  void sendResp(uint8_t type) {
+  	/* This function is called when we receive the REQ message.*/
+  	/*
   	 * `call Read.read()` reads from the fake sensor.
   	 * When the reading is done it raises the event read done.
   	 */
-	call Read.read();
+	//call Read.read();
   }
 
   //***************** Boot interface ********************//
   event void Boot.booted() {
 	dbg("boot","Application booted.\n");
-	/* Fill it ... */
+	call SplitControl.start();
   }
 
   //***************** SplitControl interface ********************//
   event void SplitControl.startDone(error_t err){
-    /* Fill it ... */
+    if(err == SUCCESS) {
+    	dbg("radio", "Radio on on node %d!\n",TOS_NODE_ID);
+	if (TOS_NODE_ID > 0){
+           call Timer0.startPeriodic( 1000 );
+  		}
+    }
+    else{
+	//dbg for error
+	call SplitControl.start();
+	dbgerror("radio", "Radio failed to start, retrying...\n"); //dbg(class of debug, message)
+    }
   }
   
   event void SplitControl.stopDone(error_t err){
-    /* Fill it ... */
+    dbg("boot", "Radio stopped!\n");
   }
 
   //***************** MilliTimer interface ********************//
-  event void MilliTimer.fired() {
+  event void Timer0.fired() {
 	/* This event is triggered every time the timer fires.
 	 * When the timer fires, we send a request
 	 * Fill this part...
