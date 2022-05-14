@@ -33,9 +33,10 @@ module sendAckC {
 
 } implementation {
   //bool FLAG;
-  uint8_t last_digit = 7; // 6+1
+  uint8_t last_digit = 6; // 6+1
   uint8_t counter=0;
-  uint8_t counter2=0; // Do we need it?
+  uint8_t i=0;
+  //uint8_t counter2=0; // Do we need it?
   uint8_t rec_id = 62; //10562546
   message_t packet;
 
@@ -124,6 +125,7 @@ module sendAckC {
       dbg("radio_send", "Packet sent...");
       dbg_clear("radio_send", " at time %s \n", sim_time_string());
       if (call PacketAcknowledgements.wasAcked(&packet)){
+      
       	call Timer.stop();
       }
       else{
@@ -159,13 +161,16 @@ module sendAckC {
   		my_msg_t* mess = (my_msg_t*)payload;
   		
   		dbg("radio_rec", "Received a message at time %s\n", sim_time_string());
-  		dbg_clear("packet", "\t\tType: %u\n", mess->type);
+  		/*dbg_clear("packet", "\t\tType: %u\n", mess->type);
   		dbg_clear("packet", "\t\tCounter: %u\n", mess->counter);
-  		dbg_clear("packet", "\t\tValue: %u\n", mess->data);
+  		dbg_clear("packet", "\t\tValue: %u\n", mess->data);*/
   		
   		if(mess->type == REQ) {
   			counter = mess->counter;
-  			sendResp();
+  			for (i=0;i<=last_digit;i++){
+  				sendResp();
+  				dbg("radio", "REQ sent with counter %d and data: %hhu \n", counter, mess->data);
+  			}
   		}
   		
   		return buf;  	
@@ -174,7 +179,7 @@ module sendAckC {
   }
   
   //************************* Read interface **********************//
-  event void Read.readDone(error_t result, uint16_t data) { // Data of fake sensors
+  event void Read.readDone(error_t result, uint16_t data2) { // Data of fake sensors
 	/* This event is triggered when the fake sensor finishes to read (after a Read.read()) 
 	 *
 	 * STEPS:
@@ -185,7 +190,7 @@ module sendAckC {
   	 }
   	 mess->type = RESP;
   	 mess->counter = counter;
-  	 mess->data = data;
+  	 mess->data = data2;
 	 /** 2. Send back (with a unicast message) the response
 	 * X. Use debug statement showing what's happening (i.e. message fields)
 	 */

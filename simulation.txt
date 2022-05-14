@@ -2,251 +2,269 @@ DEBUG (1): Application booted on Mote 1
 DEBUG (1): Radio on on node 1!
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 0 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:0.985961869 
+DEBUG (1): Packet sent... at time 0:0:0.983062716 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 1 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:1.959045385 
+DEBUG (1): Packet sent... at time 0:0:1.964218084 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 2 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:2.935958835 
+DEBUG (1): Packet sent... at time 0:0:2.932678215 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 3 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:3.916213941 
+DEBUG (1): Packet sent... at time 0:0:3.916122388 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 4 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:4.889099094 
+DEBUG (1): Packet sent... at time 0:0:4.893066356 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 5 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:5.867996175 
+DEBUG (1): Packet sent... at time 0:0:5.865280126 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 6 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:6.840042100 
+DEBUG (1): Packet sent... at time 0:0:6.842330905 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 7 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:7.814697262 
+DEBUG (1): Packet sent... at time 0:0:7.821319538 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 8 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:8.792190543 
+DEBUG (1): Packet sent... at time 0:0:8.794097881 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 9 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:9.774978593 
+DEBUG (1): Packet sent... at time 0:0:9.768508904 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 10 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:10.746887189 
+DEBUG (1): Packet sent... at time 0:0:10.750869710 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 11 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:11.726318325 
+DEBUG (1): Packet sent... at time 0:0:11.725738494 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 12 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:12.701705905 
+DEBUG (1): Packet sent... at time 0:0:12.701889009 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 13 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:13.678695648 
+DEBUG (1): Packet sent... at time 0:0:13.674575799 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 14 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:14.659133858 
+DEBUG (1): Packet sent... at time 0:0:14.656768760 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 15 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:15.635757393 
+DEBUG (1): Packet sent... at time 0:0:15.633071862 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 16 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:16.612106271 
+DEBUG (1): Packet sent... at time 0:0:16.608856168 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 17 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:17.585754360 
+DEBUG (1): Packet sent... at time 0:0:17.587203936 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 18 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:18.561462372 
+DEBUG (1): Packet sent... at time 0:0:18.563629108 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 19 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:19.538421599 
+DEBUG (1): Packet sent... at time 0:0:19.538055390 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 20 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:20.515045133 
+DEBUG (1): Packet sent... at time 0:0:20.512969950 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 21 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:21.494644115 
+DEBUG (1): Packet sent... at time 0:0:21.493728593 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 22 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:22.468795740 
+DEBUG (1): Packet sent... at time 0:0:22.470413162 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 23 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:23.448242134 
+DEBUG (1): Packet sent... at time 0:0:23.446014364 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 24 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:24.421142546 
+DEBUG (1): Packet sent... at time 0:0:24.424682565 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 25 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:25.401489204 
+DEBUG (1): Packet sent... at time 0:0:25.394912704 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 26 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:26.374633755 
+DEBUG (1): Packet sent... at time 0:0:26.375457725 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 27 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:27.345855710 
+DEBUG (1): Packet sent... at time 0:0:27.348190291 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 28 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:28.324661239 
+DEBUG (1): Packet sent... at time 0:0:28.330825754 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 29 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:29.304611170 
+DEBUG (1): Packet sent... at time 0:0:29.299560541 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 30 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:30.280349701 
+DEBUG (1): Packet sent... at time 0:0:30.278701761 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 31 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:31.255462624 
+DEBUG (1): Packet sent... at time 0:0:31.258651692 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 32 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:32.228683469 
+DEBUG (1): Packet sent... at time 0:0:32.231399517 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 33 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:33.205261228 
+DEBUG (1): Packet sent... at time 0:0:33.207199082 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 34 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:34.185302711 
+DEBUG (1): Packet sent... at time 0:0:34.181793210 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 35 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:35.160003650 
+DEBUG (1): Packet sent... at time 0:0:35.161361674 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 36 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:36.136154165 
+DEBUG (1): Packet sent... at time 0:0:36.135406489 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 37 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:37.118438677 
+DEBUG (1): Packet sent... at time 0:0:37.117675742 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 38 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:38.092544527 
+DEBUG (1): Packet sent... at time 0:0:38.094375571 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 39 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:39.064422606 
+DEBUG (1): Packet sent... at time 0:0:39.072372388 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 40 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:40.042175284 
+DEBUG (1): Packet sent... at time 0:0:40.049575754 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 41 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:41.025619458 
+DEBUG (1): Packet sent... at time 0:0:41.021377539 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 42 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:41.996337876 
+DEBUG (1): Packet sent... at time 0:0:42.000900227 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 43 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:42.976470912 
+DEBUG (1): Packet sent... at time 0:0:42.972457874 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 44 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:43.952957118 
+DEBUG (1): Packet sent... at time 0:0:43.955627391 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 45 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:44.925430287 
+DEBUG (1): Packet sent... at time 0:0:44.932510323 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 46 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:45.905914273 
+DEBUG (1): Packet sent... at time 0:0:45.907028158 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 47 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:46.882583583 
+DEBUG (1): Packet sent... at time 0:0:46.883346518 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 48 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:47.854293817 
+DEBUG (1): Packet sent... at time 0:0:47.862029978 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 49 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:48.836471518 
+DEBUG (1): Packet sent... at time 0:0:48.830886834 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 50 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:49.809173567 
+DEBUG (1): Packet sent... at time 0:0:49.815231271 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 51 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:50.788711514 
+DEBUG (1): Packet sent... at time 0:0:50.790222125 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 52 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:51.761093130 
+DEBUG (1): Packet sent... at time 0:0:51.763259865 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 53 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:52.742050136 
+DEBUG (1): Packet sent... at time 0:0:52.741958583 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 54 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:53.717391940 
+DEBUG (1): Packet sent... at time 0:0:53.719818073 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 55 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:54.698348945 
+DEBUG (1): Packet sent... at time 0:0:54.690567008 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 56 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:55.669967626 
+DEBUG (1): Packet sent... at time 0:0:55.672561605 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 57 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:56.649261434 
+DEBUG (1): Packet sent... at time 0:0:56.648284877 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 58 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:57.622161846 
+DEBUG (1): Packet sent... at time 0:0:57.625167810 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 59 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:58.598236067 
+DEBUG (1): Packet sent... at time 0:0:58.604385323 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 60 and data: 0 
-DEBUG (1): Packet sent... at time 0:0:59.578689536 
+DEBUG (1): Packet sent... at time 0:0:59.581436102 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 61 and data: 0 
-DEBUG (1): Packet sent... at time 0:1:0.555999712 
+DEBUG (1): Packet sent... at time 0:1:0.552185037 
 Packet not acknowledged 
 DEBUG (1): Preparing the message... 
 DEBUG (1): REQ sent with counter 62 and data: 0 
+DEBUG (1): Packet sent... at time 0:1:1.527725204 
+Packet not acknowledged 
+DEBUG (2): Application booted on Mote 2
+DEBUG (2): Radio on on node 2!
+DEBUG (1): Preparing the message... 
+DEBUG (1): REQ sent with counter 63 and data: 0 
+DEBUG (2): Received a message at time 0:1:2.508254966
+DEBUG (2): REQ sent with counter 63 and data: 0 
+DEBUG (2): REQ sent with counter 63 and data: 0 
+DEBUG (2): REQ sent with counter 63 and data: 0 
+DEBUG (2): REQ sent with counter 63 and data: 0 
+DEBUG (2): REQ sent with counter 63 and data: 0 
+DEBUG (2): REQ sent with counter 63 and data: 0 
+DEBUG (2): REQ sent with counter 63 and data: 0 
+DEBUG (1): Packet sent... at time 0:1:2.508422812 
+DEBUG (2): RESP sent
+DEBUG (1): Received a message at time 0:1:2.524948087
+DEBUG (2): Packet sent... at time 0:1:2.525115932 
