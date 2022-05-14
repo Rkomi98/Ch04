@@ -34,6 +34,7 @@ module sendAckC {
   bool FLAG;
   uint8_t last_digit = 7; // 6+1
   uint8_t counter=1;
+  uint8_t counter2=0;
   uint8_t rec_id = 62; //10562546
   message_t packet;
 
@@ -57,19 +58,8 @@ module sendAckC {
 	 dbg("radio_pack","Preparing the message... \n");
 	 /* 2. Set the ACK flag for the message using the PacketAcknowledgements interface
 	 *     (read the docs)*/
-	 if (counter<rec_id){
-	 	FLAG = FALSE;/*wasAcked(sensor_msg_t* mess);
-	 	if (FLAG == FALSE){
-	 		counter++;
-	 	}
-	 	else{
-	 		return;
-	 	}*/
-	 	counter++;
-	 }
-	 else{
-	 	FLAG = TRUE;//wasAcked(sensor_msg_t* mess);
-	 }
+	 ActiveMessageC = requestAck(mess);
+	 //counter = counter +1;
 	 /* Has to be changed! In particular the 0 I think or we need only the last if
 	 
 	 /** 3. Send an UNICAST message to the correct node //**HOW?**
@@ -122,10 +112,10 @@ module sendAckC {
 
   //***************** MilliTimer interface ********************//
   event void Timer0.fired() {
-	/* This event is triggered every time the timer fires.
-	 * When the timer fires, we send a request
-	 * Fill this part...
-	 */
+	/* This event is triggered every time the timer fires.*/
+	dbg("timer","Mote1 timer fired at %s.\n", sim_time_string());
+	call Read.read();
+	 //* When the timer fires, we send a request
   }
   
 
@@ -134,12 +124,35 @@ module sendAckC {
 	/* This event is triggered when a message is sent 
 	 *
 	 * STEPS:
-	 * 1. Check if the packet is sent
+	 * 1. Check if the packet is sent*/
+	 if (&packet == buf && error == SUCCESS) {
+      dbg("radio_send", "Packet sent...");
+      dbg_clear("radio_send", " at time %s \n", sim_time_string());
+    }
+    else{
+      dbgerror("radio_send", "Send done error!");
+    }
+    /*
 	 * 2. Check if the ACK is received (read the docs)
 	 * 2a. If yes, stop the timer according to your id. The program is done
 	 * 2b. Otherwise, send again the request
 	 * X. Use debug statements showing what's happening (i.e. message fields)
 	 */
+	 if (wasAcked(buf)){
+	 	counter = Y+counter2;
+	 	counter2++;
+	 	if(counter2==X){
+	 		Timer0.stop();
+	 		return;
+	 	}
+	 }
+	 else{
+	 	count++;
+	 }
+	 dbg_clear("radio_pack","\t Payload Sent\n" );
+	 dbg_clear("radio_pack", "\t\t type: %hhu \n ", mess->type);
+	 dbg_clear("radio_pack", "\t\t data: %hhu \n", mess->data);
+ 	 dbg_clear("radio_pack", "\t\t data: %hhu \n", mess->counter);
   }
 
   //***************************** Receive interface *****************//
