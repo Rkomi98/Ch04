@@ -30,16 +30,16 @@ For the wiring of:
 - Send and Receive interfaces we used: 
    ```
    App.Receive -> AMReceiverC;
-  	App.AMSend -> AMSenderC;
+   App.AMSend -> AMSenderC;
    ```
 - interfaces to access package fields:
    ```
-	  App.Packet -> AMSenderC;
-  	App.PacketAcknowledgements -> AMSenderC;
+   App.Packet -> AMSenderC;
+   App.PacketAcknowledgements -> AMSenderC;
    ```
 - fake sensor:
    ```
-	  App.Read -> FakeSensorC;
+   App.Read -> FakeSensorC;
    ```
 ### SendAckC.nc
 We implemented the logic, writing the code in the SendAckC.nc file, following the template instructions. In the code, after mote 1 and mote 2 boot, they turn on their radio, but only mote 1 has a timer which starts after booting and works with a periodicity of 1000 milliseconds. Every time the clock is Fired the function sendReq is called. In this function mote 1 creates a new request message, each time, and sends it to mote 2 requesting for an acknowledgment. Since it doesn’t receive an acknowledgment, it increments the counter.
