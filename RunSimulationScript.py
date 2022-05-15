@@ -11,7 +11,6 @@ from TOSSIM import *;
 
 t = Tossim([]);
 y = 62;
-x = 6;
 
 topofile="topology.txt";
 modelfile="meyer-heavy.txt";
