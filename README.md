@@ -12,4 +12,11 @@ Inside the folder provided we modified only the below files:
 -	[SendAck.h](https://github.com/Rkomi98/Ch04/blob/Main/sendAck.h)
 -	[SendAckAppC.nc](https://github.com/Rkomi98/Ch04/blob/Main/SendAckAppC.nc)
 -	[RunSimulationScript.py](https://github.com/Rkomi98/Ch04/blob/Main/RunSimulationScript.py)
--	[SendAckC.nc]((https://github.com/Rkomi98/Ch04/blob/Main/SendAckC.nc))
+-	[SendAckC.nc](https://github.com/Rkomi98/Ch04/blob/Main/SendAckC.nc)
+
+### SendAck.h
+In the header file (SendAck.h) we defined the structure of the message that is going to be sent by the motes. The message contains the:
+- **msg_type**, which in case of a request message is going to have the value 1 and in case it is a response is going to have the value 2. 
+- **msg_counter**, which is filled by mote 1 in each request message sent and then by mote 2 in the response messages.
+- **value**, which is the value of the fake sensor filled by mote 2 in the response message.
+
