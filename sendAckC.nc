@@ -55,7 +55,7 @@ module sendAckC {
 		return;
 	  }
 	 mess->msg_type = REQ;
-	 //mess->msg_data = data;
+	 //mess->value = data;
  	 mess->msg_counter = counter;
 	 dbg("radio_pack","Preparing the message... \n");
 	 /* 2. Set the ACK flag for the message using the PacketAcknowledgements interface
@@ -161,7 +161,7 @@ module sendAckC {
   		dbg("radio_rec", "Received a message at time %s\n", sim_time_string());
   		/*dbg_clear("packet", "\t\tType: %u\n", mess->msg_type);
   		dbg_clear("packet", "\t\tCounter: %u\n", mess->msg_counter);
-  		dbg_clear("packet", "\t\tValue: %u\n", mess->msg_data);*/
+  		dbg_clear("packet", "\t\tValue: %u\n", mess->value);*/
   		
   		if(mess->msg_type == REQ) {
   			counter = mess->msg_counter;
@@ -185,7 +185,7 @@ module sendAckC {
   	 }
   	 mess->msg_type = RESP;
   	 mess->msg_counter = counter;
-  	 mess->msg_data = data;
+  	 mess->value = data;
 	 /** 2. Send back (with a unicast message) the response
 	 * X. Use debug statement showing what's happening (i.e. message fields)
 	 */
