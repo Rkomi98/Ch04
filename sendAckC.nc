@@ -36,7 +36,6 @@ module sendAckC {
   //bool FLAG;
   uint8_t last_digit = 6; // 6+1?
   uint8_t counter=0;
-  uint8_t i=0;
   //uint8_t counter2=0; // Do we need it?
   uint8_t rec_id = 62; //10562546
   message_t packet;
@@ -55,9 +54,9 @@ module sendAckC {
 	  if (mess == NULL) {
 		return;
 	  }
-	 mess->type = REQ;
-	 //mess->data = data;
- 	 mess->counter = counter;
+	 mess->msg_type = REQ;
+	 //mess->msg_data = data;
+ 	 mess->msg_counter = counter;
 	 dbg("radio_pack","Preparing the message... \n");
 	 /* 2. Set the ACK flag for the message using the PacketAcknowledgements interface
 	 *     (read the docs)*/ 
@@ -66,7 +65,7 @@ module sendAckC {
 	 /** 3. Send an UNICAST message to the correct node //**HOW?**
 	 * X. Use debug statements showing what's happening (i.e. message fields)*/
   		if(call AMSend.send(RESP, &packet, sizeof(my_msg_t)) == SUCCESS){
-  			dbg("radio", "REQ sent with counter %d and data: %d \n", counter, mess->data);
+  			dbg("radio", "REQ sent with counter %d :\n", counter);
   			counter++;
   			}
   		}
@@ -160,12 +159,12 @@ module sendAckC {
   		my_msg_t* mess = (my_msg_t*)payload;
   		
   		dbg("radio_rec", "Received a message at time %s\n", sim_time_string());
-  		/*dbg_clear("packet", "\t\tType: %u\n", mess->type);
-  		dbg_clear("packet", "\t\tCounter: %u\n", mess->counter);
-  		dbg_clear("packet", "\t\tValue: %u\n", mess->data);*/
+  		/*dbg_clear("packet", "\t\tType: %u\n", mess->msg_type);
+  		dbg_clear("packet", "\t\tCounter: %u\n", mess->msg_counter);
+  		dbg_clear("packet", "\t\tValue: %u\n", mess->msg_data);*/
   		
-  		if(mess->type == REQ) {
-  			counter = mess->counter;
+  		if(mess->msg_type == REQ) {
+  			counter = mess->msg_counter;
   			sendResp();
   		}
   		
@@ -175,7 +174,7 @@ module sendAckC {
   }
   
   //************************* Read interface **********************//
-  event void Read.readDone(error_t result, uint16_t data2) { // Data of fake sensors
+  event void Read.readDone(error_t result, uint16_t data) { // Data of fake sensors
 	/* This event is triggered when the fake sensor finishes to read (after a Read.read()) 
 	 *
 	 * STEPS:
@@ -184,15 +183,15 @@ module sendAckC {
 	 if(mess == NULL){
   		return;
   	 }
-  	 mess->type = RESP;
-  	 mess->counter = counter;
-  	 mess->data = data2;
+  	 mess->msg_type = RESP;
+  	 mess->msg_counter = counter;
+  	 mess->msg_data = data;
 	 /** 2. Send back (with a unicast message) the response
 	 * X. Use debug statement showing what's happening (i.e. message fields)
 	 */
 	 if(call PacketAcknowledgements.requestAck(&packet) == SUCCESS) {
   		if(call AMSend.send(REQ, &packet, sizeof(my_msg_t)) == SUCCESS){
-  			dbg("radio_send", "RESP sent %d, %d \n",data2, counter); //	dbg("radio", "REQ sent with counter %d \n", counter);
+  			dbg("radio_send", "RESP sent %d, %d \n",data, counter); //	dbg("radio", "REQ sent with counter %d \n", counter);
   			}
   		}
   	}

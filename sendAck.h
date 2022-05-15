@@ -10,9 +10,9 @@ typedef nx_struct my_msg {
 	//field 1
 	//field 2
 	//field 3
-	nx_uint8_t type;
-  	nx_uint16_t counter;
-  	nx_uint16_t data;
+	nx_uint8_t msg_type;
+  	nx_uint16_t msg_counter;
+  	nx_uint16_t msg_data;
 } my_msg_t;
 
 #define REQ 1
