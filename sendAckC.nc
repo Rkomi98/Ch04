@@ -126,6 +126,9 @@ module sendAckC {
       if (call PacketAcknowledgements.wasAcked(&packet)&&counter>rec_id+last_digit+1){
       	call Timer.stop();
       }
+      else if(call PacketAcknowledgements.wasAcked(&packet) && (counter<=rec_id+last_digit+1&&counter>rec_id)){
+      	dbg_clear("radio_ack", "Packet acknowledged \n");
+      }
       else{
       	dbg_clear("radio_ack", "Packet not acknowledged \n");
       }
